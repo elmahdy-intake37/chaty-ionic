@@ -1,0 +1,30 @@
+<ion-view>
+    <ion-content class="homepage">
+        <div class="overlay"></div>
+        <div class="list padding">
+            <form name="registrationForm" ng-submit="register(registrationForm.$valid)" novalidate>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Username</span>
+                    <input id="username" name="username" ng-model="user.username" type="text" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password</span>
+                    <input id="password" name="password" ng-model="user.password"  type="password" required>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password Confirmation</span>
+                    <input id="passwordConfirm" name="passwordConfirm" ng-model="user.passwordConfirm"  type="password" required>
+                </label>
+                <div class="card bg-assertive" ng-show="err">
+                    <div class="item item-text-wrap" style="background: firebrick;">
+                        <p style="color: cornsilk;">{{errmsg}}</p>
+                    </div>
+                </div>
+                <input type="submit" class="button button-energized button-block" value="Register" />
+
+            </form>
+
+        </div>
+
+    </ion-content>
+</ion-view>

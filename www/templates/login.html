@@ -1,0 +1,27 @@
+<ion-view>
+    <ion-content class="homepage">
+        <div class="overlay"></div>
+        <div class="list padding">
+            <form name="loginForm" ng-submit="login(loginForm.$valid)">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Username</span>
+                    <input id="username" name="username" ng-model="user.username" type="text" required>
+                </label>
+                    <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password</span>
+                    <input id="password" name="password" ng-model="user.password"  type="password" required>
+                </label>
+                <div class="card bg-assertive" ng-show="err">
+                    <div class="item item-text-wrap" style="background: firebrick;">
+                        <p style="color: cornsilk;">{{errmsg}}</p>
+                    </div>
+                </div>
+                <label><input id="rememberme" name="rememberme" value="remember" type="checkbox" /> &nbsp;Remember me</label>
+                <input type="submit" class="button button-balanced button-block" value="login" />
+
+            </form>
+
+        </div>
+
+    </ion-content>
+</ion-view>
