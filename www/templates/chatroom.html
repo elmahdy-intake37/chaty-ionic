@@ -1,0 +1,23 @@
+<ion-view view-title="Chatroom">
+    <ion-content>
+        <div>
+
+            <label class="item item-input item-stacked-label">
+    <span class="input-label">chat</span>
+ 
+    <div ng-repeat="user in ahmed track by $index"   >
+    <p>{{user}} </p>
+    </div>
+  </label>
+
+            <form name="chat" ng-submit="funko(chat.$valid)" novalidate>
+                <textarea id="message" placeholder="Send Message" ng-model="mg.msgH" required></textarea>
+                <button class="button button-balanced button-block"> Send</button>
+            </form>
+
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

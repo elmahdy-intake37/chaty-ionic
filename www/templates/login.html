@@ -1,27 +1,28 @@
-<ion-view>
+<ion-view view-title="chaty">
     <ion-content class="homepage">
-        <div class="overlay"></div>
-        <div class="list padding">
-            <form name="loginForm" ng-submit="login(loginForm.$valid)">
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Username</span>
-                    <input id="username" name="username" ng-model="user.username" type="text" required>
-                </label>
-                    <label class="item item-input item-stacked-label">
-                    <span class="input-label">Password</span>
-                    <input id="password" name="password" ng-model="user.password"  type="password" required>
-                </label>
-                <div class="card bg-assertive" ng-show="err">
-                    <div class="item item-text-wrap" style="background: firebrick;">
-                        <p style="color: cornsilk;">{{errmsg}}</p>
-                    </div>
+        <div class="overlay">
+            <div class="contents">
+
+                <div class="list">
+                    <form novalidate ng-submit="submited=true ;loginn(loginForm.$valid)" name="loginForm">
+                        <label class="item item-input item-stacked-label">
+        <span class="input-label">username</span>
+        <input type="text" ng-model="loginuser.username" name="username" required>
+        <p class="error" ng-if="submited && loginForm.username.$error.required">Enter user name </p>
+
+      </label>
+                        <label class="item item-input item-stacked-label">
+        <span class="input-label">Password</span>
+        <input type="password" ng-model="loginuser.password" name="pass" required>
+        <p class="error" ng-if="submited && loginForm.pass.$error.required">Enter your password </p>
+
+      </label>
+                        <button class="button button-block button-positive">
+        Log in
+      </button>
+                    </form>
                 </div>
-                <label><input id="rememberme" name="rememberme" value="remember" type="checkbox" /> &nbsp;Remember me</label>
-                <input type="submit" class="button button-balanced button-block" value="login" />
-
-            </form>
-
+            </div>
         </div>
-
     </ion-content>
 </ion-view>

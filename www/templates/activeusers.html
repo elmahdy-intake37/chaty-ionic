@@ -1,0 +1,21 @@
+<ion-view view-title="Active Users">
+    <ion-content>
+        <div class="content has-header">
+            <div class="list" ng-repeat="user in ahmed track by $index">
+
+                <div class="item item-avatar item-icon-right">
+                    <img src="img/logo.png">
+                    <h2>Active {{user}}</h2>
+                    <p>Connect with me I'm active</p>
+                    <a ui-sref="app.privatechat" name="privatechat"><i class="icon ion-chatbubble muted"></i></a>
+                </div>
+
+
+            </div>
+
+            <button ui-sref="basic.chatroom" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-plus"></i>Chatroom</button>
+
+        </div>
+
+    </ion-content>
+</ion-view>

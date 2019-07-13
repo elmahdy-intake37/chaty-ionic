@@ -1,81 +1,55 @@
 /* Empty. Add your own CSS if you like */
-/* General
-==================================*/
-h1 {
-    color: #fff;
-    text-shadow: 0 1px 0px #000;
-    font-size: 42px;
+
+.homepage {
+    background-image: url('../img/home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
-
-/* Utilities
-==================================*/
-.title-bordered {
-    border-top: solid 2px #bbb;
-    padding-top: 30px;
-}
-
-p {
-    color: #555;
-    margin: 0 0 25px;
-}
-
-.scroll {
+.overlay:before {
+    content: "";
+    display: inline-block;
     height: 100%;
+    vertical-align: middle;
+    text-align: center;
 }
 
-
-/* Menu
-==================================*/
-.menu .bar.bar-header.expanded {
-    transition: all .5s ease-in-out;
+.contents {
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
-.menu-open .bar.bar-header.expanded {
-    background-color: #222;
+h1 {
+    color: #fff;
+    text-align: center;
 }
 
-.menu h2 {
-    bottom: 0;
-    font-size: 18px;
-    left: 16px;
-    position: absolute;
+.homepage .item {
+    border: 0;
 }
 
-.menu .avatar {
-    height: 88px;
-    width: 88px;
+.homepage .item-input {
+    text-align: left;
+    padding-left: 0;
 }
 
-.menu.menu-left * {
-    font-weight: bold;
+.homepage .item-input span {
+    color: #fff;
 }
 
-.menu-open .ion-navicon {
-    transform: rotate(-360deg);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-.menu-open .ion-navicon:before {
-    content: "\f2ca";
-}
-
-
-/* Login
-==================================*/
-.app-icon {
-    background-color: #fff;
-    background: url('../img/crown.jpg') center;
-    background-size: cover;
-    border-radius: 50%;
-    height: 125px;
-    margin: 0 auto;
-    width: 125px;
-}
-
-.social-login {
-    position: fixed;
-    bottom: 0;
+.homepage input {
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }

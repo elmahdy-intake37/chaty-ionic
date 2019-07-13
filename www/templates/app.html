@@ -1,0 +1,38 @@
+<ion-side-menus enable-menu-with-back-views="true">
+
+
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+
+            <ion-nav-buttons side="right">
+                <!-- Toggle left side menu -->
+                <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="pageContent"></ion-nav-view>
+        <!-- Main content, usually <ion-nav-view> -->
+    </ion-side-menu-content>
+
+    <!-- Right menu -->
+    <ion-side-menu side="right">
+        <ion-list>
+            <ion-item menu-toggle>
+                <img src="img/logo.png" style="width:30px;height:30px"> User Name :{{username}}
+            </ion-item>
+            <ion-item ui-sref="basic.activeusers" menu-close>
+
+                chat
+            </ion-item>
+
+            <ion-item ui-sref="basic.about" menu-close>
+                About
+            </ion-item>
+            <ion-item ng-click="logout()" menu-close>
+                logout
+            </ion-item>
+
+        </ion-list>
+    </ion-side-menu>
+
+</ion-side-menus>

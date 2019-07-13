@@ -1,21 +1,15 @@
-<ion-view>
-  <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
-    <div class="hero no-header flat">
-            <div class="content">
-                <div class="app-icon"></div>
-                <h1>Chaty</h1>
+<ion-view view-title="chaty">
+    <ion-content class="homepage">
+        <div class="overlay">
+            <div class="contents">
+                <button class="button button-positive button-block" ui-sref="login">
+        Log in
+      </button>
+
+                <button class="button button-assertive button-block" ui-sref="register">
+        Sign up
+      </button>
             </div>
         </div>
-
-    <div class="padding">
-      <button ui-sref="basic.login" class="button button-block button-positive ">
-            Login
-        </button>
-      <button ui-sref="basic.register" class="button button-block button-royal ">
-            Register
-        </button>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-view>
-
-
